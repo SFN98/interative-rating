@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(216, 12%, 8%);
+}
+
+p{
+    font-size: 0.8em;
+    color: hsla(0, 0%, 100%, 0.4);
+}
+h1{
+    color: white;
+    font-size: 1.5em;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    border:none;
+    background-color: hsl(213, 19%, 18%);
+    height: clamp(40vh, 10vw, 30vh);
+    width: calc(11vw + 110px);
+    padding: 1%;
+    margin: 30px;
+}
+
+.thanks-block{
+    position: absolute;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    border:none;
+    background-color: hsl(213, 19%, 18%);
+    height: clamp(40vh, 10vw, 30vh);
+    width: clamp(19vw, 10vw, 30vw);
+    padding: 1%;
+    display: none;
+    
+}
+.thanks-block.visible{
+    display: flex;
+}
+
+
+h2{
+    padding: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 20px;
+    font-size: 0.7em;
+    color:hsl(25, 97%, 53%) ;
+    background-color:hsla(216, 12%, 54%, 0.2) ;
+}
+.number{
+    
+    width: 15vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.num{
+    color: hsla(0, 0%, 100%, 0.4);
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color:hsla(216, 12%, 54%, 0.2) ;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.num:hover{
+    background-color:hsl(25, 97%, 53%) ;
+}
+
+.num.active{
+    background-color:hsl(217, 12%, 63%) ;
+}
+
+input:hover{
+    background-color:hsl(217, 12%, 63%) ;
+}
+
+input{
+    color: hsla(0, 0%, 100%, 0.4);
+    background-color: hsl(25, 97%, 53%);
+    margin-top: 15px;
+    width: 88%;
+    padding: 5px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color:hsla(216, 12%, 54%, 0.2) ;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+@media screen and (max-width:376px){
+    main{
+        height: calc(20vh + 110px);
+        width: calc(40vw + 110px);
+        padding: 3%;
+        padding-left: 5%;
+        
+    }
+    
+    .thanks-block{
+        height: calc(20vh + 110px);
+        width: calc(40vw + 110px);
+        padding: 3%;
+        padding-left: 5%;
+        
+        
+    }
+    .number{
+        width: 55vw;
+    }
+}
+
+
+@media screen and (max-width:540px){
+    main{
+        height: calc(20vh + 110px);
+        width: calc(40vw + 110px);
+        padding: 3%;
+        padding-left: 5%;
+        
+    }
+    
+    .thanks-block{
+        height: calc(20vh + 110px);
+        width: calc(40vw + 110px);
+        padding: 3%;
+        padding-left: 5%;
+        
+        
+    }
+    .number{
+        width: 52vw;
+    }
+}
+
+
+@media screen and (min-width:768px) and (max-width:1023px){
+    main{
+        height: calc(20vh + 110px);
+        width: calc(40vw + 110px);
+        padding: 3%;
+        padding-left: 5%;
+    }
+    
+    .thanks-block{
+        height: calc(20vh + 110px);
+        width: calc(40vw + 110px);
+        padding: 3%;
+        padding-left: 5%; 
+    }
+    .number{
+        width: 40vw;
+    }
+}
+
+@media screen and (min-width:1024px) and (max-width:1024px){
+    .number{
+        width: 17.8vw;
+    }
+}
+
