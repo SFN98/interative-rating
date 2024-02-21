@@ -15,9 +15,9 @@ function chososenumber(){
 
                 let choice = document.querySelector("span")
             if(numbers[i].classList.contains("active")){
-                numbers[i].value
                 choice.innerText=numbers[i].innerText
             }
+            
         }) 
         
     }
@@ -26,15 +26,27 @@ chososenumber()
 
 /// This is display the tanks section
 function displaypopup(){
+    let choice = document.querySelector("span")
+    let submit = document.querySelector("input[type='submit']")
     let form = document.querySelector("form")
-    submit = document.querySelector("input")
     form.addEventListener("submit", (event)=>{
         event.preventDefault()
+        
+       if(choice.innerText!=="0"){
         let popup = document.querySelector("section")
         popup.classList.add("visible")
+       }else{
+        hidepopup()
+        error()
+        setTimeout(hideerror, 3000)
+       }
+            
+        
     })
+    
 
 }
+
 displaypopup()
 
 /// this function is used to hide the thanks section
@@ -46,3 +58,14 @@ function hidepopup(){
     })
 }
 hidepopup()
+
+function error(){
+    let error= document.querySelector(".error")
+    error.classList.add("show") 
+}
+
+function hideerror(){
+    let error= document.querySelector(".error")
+    error.classList.remove("show")
+
+}

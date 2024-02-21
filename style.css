@@ -125,6 +125,20 @@ input{
 
 }
 
+.error{
+     background-color: rgba(242, 13, 13, 0.5);
+     color: white;
+     position: absolute;
+     left:57%;
+     bottom: 38%;
+     padding: 1%;
+     border-radius: 20px;
+     display: none;
+}
+.error.show{
+    display: flex;
+}
+
 @media screen and (max-width:376px){
     main{
         height: calc(20vh + 110px);
